@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{dojo.name}}</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="ninjas pertaining to one dojo">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="head">
+                <h1>{{dojo.name}} Ninjas</h1>
+            </div>
+
+            <div class="body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Age</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%for r in dojo.ninjas%}
+                        <td>{{r.first_name}}</td>
+                        <td>{{r.last_name}}</td>
+                        <td>{{r.age}}</td>
+                        <td>
+                            <a href="/ninjas/get/{{r.id}}">Edit</a> 
+                            <a href="/ninjas/delete/{{r.id}}/{{r.dojos_id}}">Delete</a>
+                        </td>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="submit">
+                <a class="btn" href="/dojos">Home</a>
+            </div>
+        </div>
+    </body>
+</html>

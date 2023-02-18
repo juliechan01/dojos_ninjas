@@ -1,0 +1,79 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  /* Fixed width container class that will "auto-center" itself */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.left > h1, .right > h1 {
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  color: white;
+  background-color: royalblue;
+  border-color: black;
+  box-shadow: 3px 2px black;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.right > table {
+  margin-bottom: 15px;
+}
+
+.right {
+  margin-right: 30px;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dojo, .name1, .name2, .age, .submit {
+  padding: 10px;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px #ddd;
+  text-align: center;
+}
+
+tbody > tr:hover {background-color: coral;}
+
+.submit {
+  display: flex;
+  justify-content: center;
+}
+
+.submit0 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}

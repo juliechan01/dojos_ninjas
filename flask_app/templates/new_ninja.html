@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>New Ninja</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="adding a ninja">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="head">
+                <h1>New Ninja</h1>
+            </div>
+
+            <div class="body">
+                <form action="/ninjas/new" method="POST">
+                    <div class="dojo">
+                        <h3>Dojo:</h3>
+                        <select name="dojos_id" id="">
+                            <option value="70">Coding Dojo</option>
+                            <option value="71">Coding Academy</option>
+                            <option value="72">SheCodes</option>
+                        </select>
+                    </div>
+
+                    <div class="name1">
+                        <h3>First Name:</h3>
+                        <input type="text" name="first_name">
+                    </div>
+
+                    <div class="name2">
+                        <h3>Last Name:</h3>
+                        <input type="text" name="last_name">
+                    </div>
+
+                    <div class="age">
+                        <h3>Age:</h3>
+                        <input type="number" name="age">
+                    </div>
+
+                    <div class="submit">
+                        <button class="btn">Create</button>
+                    </div>
+                </form>
+            </div>
+            <div class="submit0">
+                <a class="btn" href="/dojos">Home</a>
+            </div>
+        </div>
+    </body>
+</html>

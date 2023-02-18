@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>All Dojos</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="all dojos">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="home">
+                <div class="left">
+                    <h1>New Dojos</h1>
+                    <form action="/dojos/create" method="POST">
+                        <h3>Name:</h3>
+                        <input type="text" name="name">
+                        <button class="btn">Create</button>
+                    </form>
+                </div>
+
+                <div class="right">
+                    <h1>All Dojos</h1>
+                    {%for d in dojos%}
+                    <table>
+                        <tbody>
+                            <td>
+                                <a href="/dojos/{{d.id}}">{{d.name}}</a>
+                            </td>
+                        </tbody>
+                    </table>
+                    {%endfor%}
+                </div>
+            </div>
+            <div class="submit">
+                <a class="btn" href="/ninjas">Add Ninja</a>
+            </div>
+        </div>
+    </body>
+</html>
